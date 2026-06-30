@@ -1,16 +1,16 @@
-# Thiago Informa
+# Informativos Escolares
 
-## Plataforma Web de Informativos e Projetos Escolares da Educação Infantil
+## Plataforma Web para Gerenciamento de Informativos e Projetos Educacionais
 
 ---
 
 # Sobre o Projeto
 
-O **Thiago Informa** é uma plataforma web desenvolvida para centralizar a comunicação entre a escola e as famílias dos alunos da Educação Infantil da **EMEI Thiago Silva Santos**.
+O **Informativos Escolares** é uma plataforma web desenvolvida para centralizar a comunicação entre a instituição de ensino e as famílias dos alunos.
 
-O sistema foi idealizado para facilitar o acesso a informativos, projetos pedagógicos, comunicados, eventos e notícias da escola, promovendo maior transparência e participação dos responsáveis no processo educacional.
+O sistema foi idealizado para facilitar o acesso a informativos, projetos pedagógicos, comunicados, eventos e notícias, promovendo maior transparência e participação dos responsáveis no processo educacional.
 
-A plataforma permite que pais e responsáveis acompanhem as atividades da instituição por meio de um ambiente digital moderno, enquanto a equipe gestora possui ferramentas administrativas para gerenciar todo o conteúdo publicado.
+A plataforma permite que pais e responsáveis acompanhem as atividades da instituição por meio de um ambiente digital moderno, enquanto a equipe administrativa possui ferramentas para gerenciar todo o conteúdo publicado.
 
 ---
 
@@ -21,9 +21,9 @@ Desenvolver uma plataforma web responsiva para gerenciamento e divulgação de:
 * Informativos escolares;
 * Projetos pedagógicos;
 * Comunicados institucionais;
-* Notícias e eventos da escola.
+* Notícias e eventos.
 
-Promovendo uma comunicação mais eficiente entre escola e família.
+Promovendo uma comunicação mais eficiente entre a instituição e as famílias.
 
 ---
 
@@ -40,7 +40,7 @@ Promovendo uma comunicação mais eficiente entre escola e família.
 
 ---
 
-## Administradores (Equipe Gestora)
+## Administradores
 
 * Login administrativo;
 * Cadastro de informativos;
@@ -57,20 +57,20 @@ Promovendo uma comunicação mais eficiente entre escola e família.
 
 ## Fluxo de Acesso
 
-### Login dos Pais
+### Login dos Pais e Responsáveis
 
 1. Acessar a página inicial;
-2. Informar credenciais;
-3. Sistema valida os dados;
-4. Redirecionamento para página principal;
+2. Informar as credenciais;
+3. O sistema valida os dados;
+4. Redirecionamento para a página principal;
 5. Exibição dos informativos e projetos.
 
 ### Login dos Administradores
 
 1. Acessar a página inicial;
-2. Informar credenciais administrativas;
-3. Sistema valida os dados;
-4. Redirecionamento para painel administrativo;
+2. Informar as credenciais administrativas;
+3. O sistema valida os dados;
+4. Redirecionamento para o painel administrativo;
 5. Exibição das funcionalidades de gerenciamento.
 
 ---
@@ -106,7 +106,21 @@ Permite:
 
 # Tecnologias Utilizadas
 
-Em discussão
+* React
+* HTML5
+* CSS3
+* Node.js
+* MongoDB
+
+---
+
+# Padrões de Projeto (Design Patterns)
+
+Durante o desenvolvimento foram implementados os seguintes padrões de projeto:
+
+* **Facade (Fachada):** simplifica a comunicação entre os módulos do sistema por meio de uma interface unificada.
+* **Factory (Fábrica):** utilizado para criação de objetos de forma organizada e desacoplada.
+* **Singleton:** garante a existência de uma única instância para componentes compartilhados da aplicação.
 
 ---
 
@@ -114,9 +128,9 @@ Em discussão
 
 A plataforma foi projetada para funcionar em:
 
-* Computadores
-* Tablets
-* Smartphones
+* Computadores;
+* Tablets;
+* Smartphones.
 
 Garantindo acessibilidade para todos os usuários.
 
@@ -141,21 +155,20 @@ O sistema considera:
 * Interface simples e intuitiva;
 * Acompanhamento de projetos em tempo real;
 * Redução do uso de comunicados impressos;
-* Transparência das ações pedagógicas;
-* Valorização do trabalho da equipe escolar;
+* Transparência das ações institucionais;
 * Compatibilidade com dispositivos móveis.
 
 ---
 
 # Impacto Esperado
 
-A implementação do Thiago Informa contribuirá para:
+A implementação do **Informativos Escolares** contribuirá para:
 
-* Fortalecimento da relação escola-família;
-* Maior participação dos responsáveis na vida escolar;
-* Divulgação eficiente dos projetos pedagógicos;
+* Fortalecimento da relação entre instituição e famílias;
+* Maior participação dos responsáveis;
+* Divulgação eficiente de projetos pedagógicos;
 * Melhor organização das informações institucionais;
-* Modernização dos canais de comunicação da escola.
+* Modernização dos canais de comunicação.
 
 ---
 
@@ -177,7 +190,7 @@ A implementação do Thiago Informa contribuirá para:
 * Usabilidade;
 * Escalabilidade;
 * Disponibilidade;
-* Conformidade com LGPD.
+* Conformidade com a LGPD.
 
 ---
 
@@ -186,15 +199,13 @@ A implementação do Thiago Informa contribuirá para:
 ## 1. Clonar o Repositório
 
 ```bash
-git clone https://github.com/ManuelaAntonelli/Thiago-Informa.git
-cd Thiago-Informa
+git clone <URL_DO_REPOSITORIO>
+cd Informativos-Escolares
 ```
 
 ---
 
 ## 2. Instalar Dependências
-
-Na raiz do projeto execute:
 
 ```bash
 npm install
@@ -208,15 +219,13 @@ Crie um arquivo `.env` na raiz do projeto:
 
 ```env
 PORT=5000
-MONGO_URI=mongodb://127.0.0.1:27017/thiago-informa
-JWT_SECRET=thiago_informa_2026
+MONGO_URI=mongodb://127.0.0.1:27017/informativos-escolares
+JWT_SECRET=informativos_escolares_2026
 ```
 
 ---
 
 ## 4. Iniciar o MongoDB
-
-### MongoDB Local
 
 Execute:
 
@@ -224,38 +233,15 @@ Execute:
 mongod
 ```
 
-Caso o comando não seja reconhecido:
-
-* Instale o MongoDB Community Server
-* Adicione o MongoDB ao PATH do Windows
-
----
-
-### MongoDB Atlas (Nuvem)
-
-Caso utilize MongoDB Atlas, altere a variável:
-
-```env
-MONGO_URI=sua_string_de_conexao_atlas
-```
-
-Exemplo:
-
-```env
-MONGO_URI=mongodb+srv://usuario:senha@cluster.mongodb.net/thiago-informa
-```
+Ou utilize uma instância do MongoDB Atlas alterando a variável `MONGO_URI`.
 
 ---
 
 ## 5. Rodar o Projeto
 
-Execute:
-
 ```bash
 npm run dev
 ```
-
-O comando iniciará simultaneamente:
 
 ### Backend
 
@@ -271,24 +257,21 @@ http://localhost:5173
 
 ---
 
-## Scripts Disponíveis
+# Scripts Disponíveis
 
-### Iniciar
+### Iniciar aplicação
 
 ```bash
 npm run dev
 ```
----
 
-### Iniciar apenas o Backend
+### Backend
 
 ```bash
 npm run backend
 ```
 
----
-
-### Iniciar apenas o Frontend
+### Frontend
 
 ```bash
 npm run frontend
@@ -298,28 +281,27 @@ npm run frontend
 
 # Status do Projeto
 
-Em desenvolvimento
+🚧 Em desenvolvimento.
 
 ---
 
-### Integrantes do Projeto
+# Autor
 
-* **[Alice]** - [Alice Santos M. de Barros](https://github.com/AliceBiju)
-* Manuela Antonelli
-* José Antonio de Carvalho Neto
-* Ranny Fabela Carvalho Leal
-* **[Matheus]** - [Matheus Henrique Lira](https://github.com/MatheusHenriqueLira)
+**Alice Santos M. de Barros**
+
+### Créditos
+
+Agradecimentos a **José Antonio de Carvalho Neto** e à **Manuela Antonelli** pela ideia do projeto e colaboração na elaboração dos requisitos funcionais.
+
+---
+
+# Atividade Acadêmica
+
+Este projeto foi desenvolvido como **atividade final da disciplina de Engenharia de Software**, aplicando conceitos de análise de requisitos, arquitetura de software, desenvolvimento web, banco de dados e padrões de projeto.
 
 ---
 
 # Licença
 
-Este projeto possui finalidade acadêmica e educacional, sendo desenvolvido como atividade prática para aplicação dos conceitos de Engenharia de Software, Desenvolvimento Web e Banco de Dados.
+Este projeto possui finalidade exclusivamente acadêmica e educacional.
 
----
-
-# Instituição
-
-**EMEI Thiago Silva Santos**
-
-Plataforma desenvolvida para apoio à comunicação escolar e divulgação de projetos pedagógicos da Educação Infantil.
